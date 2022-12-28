@@ -1,6 +1,7 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 
+// Modelo a inyectar en el servicio
 @Schema()
 export class Pokemon extends Document {
   @Prop({
