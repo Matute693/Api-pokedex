@@ -13,6 +13,7 @@ import { Pokemon } from './entities/pokemon.entity';
 @Injectable()
 export class PokemonService {
   constructor(
+    // pokemonModel no es un servicio para inyectarlo como dependencia por eso debo colacar el @InjectModel decorador para hacerlo !
     @InjectModel(Pokemon.name)
     readonly pokemonModel: Model<Pokemon>,
   ) {}
@@ -72,8 +73,12 @@ export class PokemonService {
     }
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} pokemon`;
+  async remove(id: string) {
+    const { deletedCount } = await this.pokemonModel.deleteOne({ _id: id });
+    if (deletedCount === 0) {
+      throw new BadRequestException(`id ${id} doesn't exist in the database`);
+    }
+    return `Pokemon delete successfully`;
   }
 
   private handleExeption(error: any) {
