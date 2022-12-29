@@ -47,7 +47,7 @@ localhost:3000/api/v2/pokemon
 METHOD
 /GET filter by id
 
-localhost:3000/api/v2/pokemon
+localhost:3000/api/v2/pokemon/:id
 
  /POST create Pokemon 
 -body
