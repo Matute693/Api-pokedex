@@ -40,6 +40,35 @@ With this command you can generate a new endpoint in the REST API
 nest g res pokemon --no-spec
 ```
 
+ENDPOINTS
+
+localhost:3000/api/v2/pokemon
+
+METHOD
+1. /GET filter by id
+
+localhost:3000/api/v2/pokemon
+2. /POST create Pokemon 
+-body
+```
+{
+    "no": 5,
+    "name": "pepe"
+}
+```
+
+localhost:3000/api/v2/pokemon/:id
+3. /PATCH updated Pokemon
+```
+{
+    "no": 5,
+    "name": "pepe2"
+}
+```
+
+localhost:3000/api/v2/pokemon/:id
+4. /DELETE delete Pokemon
+
 
 ## Stack used
 
