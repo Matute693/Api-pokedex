@@ -45,29 +45,30 @@ ENDPOINTS
 localhost:3000/api/v2/pokemon
 
 METHOD
-1. /GET filter by id
+/GET filter by id
 
 localhost:3000/api/v2/pokemon
-2. /POST create Pokemon 
+
+ /POST create Pokemon 
 -body
 ```
 {
-    "no": 5,
-    "name": "pepe"
+    "no": 1,
+    "name": "pikachu"
 }
 ```
 
 localhost:3000/api/v2/pokemon/:id
-3. /PATCH updated Pokemon
+/PATCH updated Pokemon
 ```
 {
-    "no": 5,
-    "name": "pepe2"
+    "no": 1,
+    "name": "charmander"
 }
 ```
 
 localhost:3000/api/v2/pokemon/:id
-4. /DELETE delete Pokemon
+/DELETE delete Pokemon
 
 
 ## Stack used
